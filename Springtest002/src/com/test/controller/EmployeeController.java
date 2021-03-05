@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.test.service.Employee;
+import com.test.repository.Employee;
 
 @Controller
 public class EmployeeController {
@@ -29,23 +29,23 @@ public class EmployeeController {
 		boolean error = false;
 		System.out.println(emp);
 
-		if (emp.getFirstName().isEmpty()) {
+		if (emp.getEmailId().isEmpty()) {
 			result.rejectValue("firstName", "error.firstName");
 			error = true;
 		}
 
-		if (emp.getFirstName().isEmpty()) {
+		if (emp.getEmailId().isEmpty()) {
 			result.rejectValue("lastName", "error.lastName");
 			error = true;
 		}
 
-		if (emp.getFirstName().isEmpty()) {
+		if (emp.getEmailId().isEmpty()) {
 			result.rejectValue("emailId", "error.emailId");
 			error = true;
 		}
 		
 		if(error) {
-			return "newEmployee";
+			return "redirect:/newEmployee";
 		}
 
 		return "redirect:/success";

@@ -25,10 +25,12 @@
 			</tr>
 			<tr>
 				<td><spring:message code="lbl.lastName" text="Enter Last Name" /></td>
+				<td><form:input path="lastName" /></td>
 				<td><form:errors path="lastName" /></td>
 			</tr>
 			<tr>
 				<td><spring:message code="lbl.emailid" text="Enter Email" /></td>
+				<td><form:input path="emailId" /></td>
 				<td><form:errors path="emailId" /></td>
 			</tr>
 			<tr>

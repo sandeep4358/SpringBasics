@@ -1,12 +1,10 @@
-package com.test.service;
+package com.test.repository;
 
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
-@Getter
-@Setter
+@Data
 @ToString
 @NoArgsConstructor
 public class Employee {
